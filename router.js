@@ -9,7 +9,7 @@ let params = [
     check('subject').exists().isLength({min: 1}),
     check('message').exists().isLength({min: 1})
 ];
-router.post('/', params, (req, res) => {
+router.post('/contact', params, (req, res) => {
     const result = validationResult(req);
 	if (!result.isEmpty()) {
         res.status(400);
